@@ -655,75 +655,75 @@ public class XlsFile {
                 switch(columna.getTipo()){
                     case TIPO:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("tipo > " + contenido + " ~\n") : "tipo > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("tipo > " + contenido + " ~\n") : "tipo > null ~\n"; 
                         break;
                     case IDPREGUNTA:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("idpregunta > " + contenido + " ~\n") : "idpregunta > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("idpregunta > " + contenido + " ~\n") : "idpregunta > null ~\n"; 
                         break;
                     case ETIQUETA:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("etiqueta > " + contenido + " ~\n") : "etiqueta > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("etiqueta > " + contenido + " ~\n") : "etiqueta > null ~\n"; 
                         break;
                     case SUGERIR:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("sugerir > " + contenido + " ~\n") : "sugerir > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("sugerir > " + contenido + " ~\n") : "sugerir > null ~\n"; 
                         break;
                     case CODIGO_PRE:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("codigo_pre > " + contenido + " ~\n") : "codigo_pre > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("codigo_pre > " + contenido + " ~\n") : "codigo_pre > null ~\n"; 
                         break;
                     case CODIGO_POST:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("codigo_post > " + contenido + " ~\n") : "codigo_post > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("codigo_post > " + contenido + " ~\n") : "codigo_post > null ~\n"; 
                         break;
                     case RESTRINGIR:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("restringir > " + contenido + " ~\n") : "restringir > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("restringir > " + contenido + " ~\n") : "restringir > null ~\n"; 
                         break;
                     case RESTRINGIRMSN:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("restringirmsn > " + contenido + " ~\n") : "restringirmsn > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("restringirmsn > " + contenido + " ~\n") : "restringirmsn > null ~\n"; 
                         break;
                     case REQUERIDO:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("requerido > " + contenido + " ~\n") : "requerido > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("requerido > " + contenido + " ~\n") : "requerido > null ~\n"; 
                         break;
                     case REQUERIDOMSN:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("requeridomsn > " + contenido + " ~\n") : "requeridomsn > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("requeridomsn > " + contenido + " ~\n") : "requeridomsn > null ~\n"; 
                         break;
                     case PREDETERMINADO:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("predeterminado > " + contenido + " ~\n") : "predeterminado > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("predeterminado > " + contenido + " ~\n") : "predeterminado > null ~\n"; 
                         break;
                     case APLICABLE:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("aplicable > " + contenido + " ~\n") : "aplicable > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("aplicable > " + contenido + " ~\n") : "aplicable > null ~\n"; 
                         break;
                     case LECTURA:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("lectura > " + contenido + " ~\n") : "lectura > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("lectura > " + contenido + " ~\n") : "lectura > null ~\n"; 
                         break;
                     case CALCULO:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("calculo > " + contenido + " ~\n") : "calculo > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("calculo > " + contenido + " ~\n") : "calculo > null ~\n"; 
                         break;
                     case REPETICION:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("repeticion > " + contenido + " ~\n") : "repeticion > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("repeticion > " + contenido + " ~\n") : "repeticion > null ~\n"; 
                         break;
                     case MULTIMEDIA:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("multimedia > " + contenido + " ~\n") : "multimedia > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("multimedia > " + contenido + " ~\n") : "multimedia > null ~\n"; 
                         break;
                     case APARIENCIA:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("apariencia > " + contenido + " ~\n") : "apariencia > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("apariencia > " + contenido + " ~\n") : "apariencia > null ~\n"; 
                         break;
                     case PARAMETRO:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("parametro > " + contenido + " ~\n") : "parametro > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("parametro > " + contenido + " ~\n") : "parametro > null ~\n"; 
                         break;
                 }
             }
@@ -748,19 +748,19 @@ public class XlsFile {
                 switch(columna.getTipo()){
                     case NOMBRE_LISTA:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("nombre_lista > " + contenido + " ~\n") : "nombre_lista > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("nombre_lista > " + contenido + " ~\n") : "nombre_lista > null ~\n"; 
                         break;
                     case NOMBRE:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("nombre > " + contenido + " ~\n") : "nombre > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("nombre > " + contenido + " ~\n") : "nombre > null ~\n"; 
                         break;
                     case ETIQUETA:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("etiqueta > " + contenido + " ~\n") : "etiqueta > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("etiqueta > " + contenido + " ~\n") : "etiqueta > null ~\n"; 
                         break;
                     case MULTIMEDIA:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("multimedia > " + contenido + " ~\n") : "multimedia > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("multimedia > " + contenido + " ~\n") : "multimedia > null ~\n"; 
                         break;
                 }
             }
@@ -785,27 +785,27 @@ public class XlsFile {
                 switch(columna.getTipo()){
                     case TITULO_FORMULARIO:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("titulo_formulario > " + contenido + " ~\n") : "titulo_formulario > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("titulo_formulario > " + contenido + " ~\n") : "titulo_formulario > null ~\n"; 
                         break;
                     case IDFORM:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("idform > " + contenido + " ~\n") : "idform > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("idform > " + contenido + " ~\n") : "idform > null ~\n"; 
                         break;
                     case ESTILO:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("estilo > " + contenido + " ~\n") : "estilo > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("estilo > " + contenido + " ~\n") : "estilo > null ~\n"; 
                         break;
                     case IMPORTAR:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("importar > " + contenido + " ~\n") : "importar > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("importar > " + contenido + " ~\n") : "importar > null ~\n"; 
                         break;
                     case CODIGO_PRINCIPAL:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("codigo_principal > " + contenido + " ~\n") : "codigo_principal > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("codigo_principal > " + contenido + " ~\n") : "codigo_principal > null ~\n"; 
                         break;
                     case CODIGO_GLOBAL:
                         contenido = (!columna.getCeldas().isEmpty()) ? columna.getCeldas().get(i) : "";
-                        salida += (!contenido.isEmpty()) ? ("codigo_global > " + contenido + " ~\n") : "codigo_global > nulo ~\n"; 
+                        salida += (!contenido.isEmpty()) ? ("codigo_global > " + contenido + " ~\n") : "codigo_global > null ~\n"; 
                         break;
                 }
             }

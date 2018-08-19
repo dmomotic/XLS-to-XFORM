@@ -36,12 +36,12 @@ public class main {
         
         File file = new File("C:/Users/damon/Desktop/Arbol.xls");
         
-        /*XlsFile encuesta = new XlsFile("Encuesta");
+        XlsFile encuesta = new XlsFile("Encuesta");
         encuesta.readXLSFileWithBlankCellsEncuesta(file);
         encuesta.imprimirErrores();
         encuesta.imprimirColumnas();
         
-        System.out.println(encuesta.generaSalidaEncuesta());*/
+        System.out.println(encuesta.generaSalidaEncuesta());
         
         /*XlsFile opciones = new XlsFile("Opciones");
         opciones.readXLSFileWithBlankCellsOpciones(file);
@@ -50,12 +50,12 @@ public class main {
         
         System.out.println(opciones.generaSalidaOpciones());*/
         
-        XlsFile configuracion = new XlsFile("Configuracion");
+        /*XlsFile configuracion = new XlsFile("Configuracion");
         configuracion.readXLSFileWithBlankCellsConfiguracion(file);
         configuracion.imprimirErrores();
         configuracion.imprimirColumnas();
         
-        System.out.println(configuracion.generaSalidaConfiguracion());
+        System.out.println(configuracion.generaSalidaConfiguracion());*/
 
     }
 }

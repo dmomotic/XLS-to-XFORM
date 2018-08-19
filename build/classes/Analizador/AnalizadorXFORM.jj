@@ -1,0 +1,247 @@
+
+/*
+ * Copyright © 2002 Sun Microsystems, Inc., 4150 Network Circle, Santa Clara,
+ * California 95054, U.S.A. All rights reserved.  Sun Microsystems, Inc. has
+ * intellectual property rights relating to technology embodied in the product
+ * that is described in this document. In particular, and without limitation,
+ * these intellectual property rights may include one or more of the U.S.
+ * patents listed at http://www.sun.com/patents and one or more additional
+ * patents or pending patent applications in the U.S. and in other countries.
+ * U.S. Government Rights - Commercial software. Government users are subject
+ * to the Sun Microsystems, Inc. standard license agreement and applicable
+ * provisions of the FAR and its supplements.  Use is subject to license terms.
+ * Sun,  Sun Microsystems,  the Sun logo and  Java are trademarks or registered
+ * trademarks of Sun Microsystems, Inc. in the U.S. and other countries.  This
+ * product is covered and controlled by U.S. Export Control laws and may be
+ * subject to the export or import laws in other countries.  Nuclear, missile,
+ * chemical biological weapons or nuclear maritime end uses or end users,
+ * whether direct or indirect, are strictly prohibited.  Export or reexport
+ * to countries subject to U.S. embargo or to entities identified on U.S.
+ * export exclusion lists, including, but not limited to, the denied persons
+ * and specially designated nationals lists is strictly prohibited.
+ */
+
+
+options {
+  LOOKAHEAD = 1;
+  CHOICE_AMBIGUITY_CHECK = 2;
+  OTHER_AMBIGUITY_CHECK = 1;
+  STATIC = true;
+  DEBUG_PARSER = false;
+  DEBUG_LOOKAHEAD = false;
+  DEBUG_TOKEN_MANAGER = false;
+  ERROR_REPORTING = true;
+  JAVA_UNICODE_ESCAPE = false;
+  UNICODE_INPUT = false;
+  IGNORE_CASE = true;
+  USER_TOKEN_MANAGER = false;
+  USER_CHAR_STREAM = false;
+  BUILD_PARSER = true;
+  BUILD_TOKEN_MANAGER = true;
+  SANITY_CHECK = true;
+  FORCE_LA_CHECK = false;
+}
+
+PARSER_BEGIN(ParserJCC)
+package Analizador;
+import java.util.ArrayList;
+import java.io.*;
+
+public class ParserJCC {
+
+  public static void main(String args[]) throws ParseException {
+    try{
+        ParserJCC parser = new ParserJCC(System.in);
+        //System.out.println(parser.Input());
+        parser.Input();
+    }catch (ParseException e){
+        System.out.println(e.getMessage());
+    }
+  }
+
+}
+PARSER_END(ParserJCC)
+
+//Columnas para hoja ENCUESTA
+TOKEN:
+{
+    <TIPO: "tipo"> {}
+    |<IDPREGUNTA: "idpregunta"> {}
+    |<ETIQUETA: "etiqueta"> {}
+    |<SUGERIR: "sugerir"> {}
+    |<CODIGO_PRE: "codigo_pre"> {}
+    |<CODIGO_POST: "codigo_post"> {}
+    |<RESTRINGIR: "restringir"> {}
+    |<RESTRINGIRMSN: "restringirmsn"> {}
+    |<REQUERIDO: "requerido"> {}
+    |<REQUERIDOMSN: "requeridomsn"> {}
+    |<PREDETERMINADO: "predeterminado"> {}
+    |<APLICABLE: "aplicable"> {}
+    |<LECTURA: "lectura"> {}
+    |<CALCULO: "calculo"> {}
+    |<REPETICION: "repeticion"> {}
+    |<MULTIMEDIA: "multimedia"> {}
+    |<APARIENCIA: "apariencia"> {}
+    |<PARAMETRO: "parametro"> {}
+}
+
+//Columnas para hoja OPCIONES
+TOKEN:{
+    <NOMBRE_LISTA: "nombre_lista"> {}
+    |<NOMBRE: "nombre"> {}
+    //|<ETIQUETA: "etiqueta"> {}
+    //|<MULTIMEDIA: "multimedia"> {}
+}
+
+//Columnas para hoja CONFIGURACION
+TOKEN:{
+    <TITULO_FORMULARIO: "titulo_formulario"> {}
+    |<IDFORM: "idform"> {}
+    |<ESTILO: "estilo"> {}
+    |<IMPORTAR: "importar"> {}
+    |<CODIGO_PRINCIPAL: "codigo_principal"> {}
+    |<CODIGO_GLOBAL: "codigo_global"> {}
+}
+
+//Tipo de HOJAS del XLS
+TOKEN:{
+    <ENCUESTA: "encuesta"> {}
+    |<OPCIONES: "opciones"> {}
+    |<CONFIGURACION: "configuracion"> {}
+}
+
+//Tipos de pregunta
+TOKEN:{
+    <TEXTO: "texto"> {}
+    |<ENTERO: "entero"> {}
+    |<DECIMAL: "decimal"> {}
+    |<RANGO: "rango"> {}
+    |<CONDICION: "condicion"> {}
+    |<FECHA: "fecha"> {}
+    |<HORA: "hora"> {}
+    |<FECHAHORA: "fechahora"> {}
+    |<SELECCION_UNO: "seleccion_uno"> {}
+    |<SELECCION_MULTIPLE: "seleccion_multiple"> {}
+    |<NOTA: "nota"> {}
+    |<FICHERO: "fichero"> {}
+    |<CALCULAR: "calcular"> {}
+    |<INICIAR_AGRUPACION: "iniciar agrupacion"> {}
+    |<FINALIZAR_AGRUPACION: "finalizar agrupacion"> {}
+    |<INICIAR_CICLO: "iniciar ciclo"> {}
+    |<FINALIZAR_CICLO: "finalizar ciclo"> {}
+}
+
+//Tipos de multimedia
+TOKEN :
+{ 
+    <MEDIA_IMAGEN: "media_imagen"> {}
+    |<MEDIA_VIDEO: "media_video"> {}
+    |<MEDIA_AUDIO: "media_audio"> {}
+
+}
+
+TOKEN : //TIPOS ETIQUETA TEXTO PARAMETRO
+{ 
+    <CAD_MIN: "cad_min"> {}
+    |<CAD_MAX: "cad_max"> {}
+    |<CAD_FILA: "cad_fila"> {}
+}
+
+//Operadores matematicos
+TOKEN :
+{ 
+    <MAS: "+"> {}
+    |<MENOS: "-"> {}
+    |<POR: "*"> {}
+    |<DIVISION: "/"> {}
+}
+
+//Operadores logicos
+TOKEN : //OPERANDOS
+{ 
+    <AND: "&&"> {}
+    |<OR: "||"> {}
+    |<NOT: "!"> {}
+
+}
+
+//Operadores para comparaciones
+TOKEN : 
+{ 
+    <IGUAL: "="> {}
+    |<MENOR_IGUAL: "<="> {}
+    |<MAYOR_IGUAL: ">="> {}
+    |<MENOR: "<"> {}
+    |<MAYOR: ">"> {}
+}
+
+//Simbolos permititdos
+TOKEN : 
+{ 
+    <ALLAVE: "{"> {}
+    |<CLLAVE: "}" > {}
+    |<ACORCHETE: "["> {}
+    |<CCORCHETE: "]"> {}
+    |<APARENTESIS: "("> {}
+    |<CPARENTESIS: ")"> {}
+    |<ARROBA: "@"> {}
+    |<COMA: ","> {}
+    |<DOSPUNTOS: ":"> {}
+    |<PUNTOYCOMA: ";"> {}
+    |<APREGUNTA: "¿"> {}
+    |<CPREGUNTA: "?"> {}
+    |<NUMERAL: "#"> {}
+    |<PUNTO: "."> {}
+    |<COMILLA: "\""> {}
+    |<VIRGULILLA: "~"> {}
+}
+
+//Lo que no necesito
+SKIP : 
+{ 
+    " "|"\n" | "\r" | "\r\n" 
+}
+
+void Input() :
+{}
+{
+  <ENCUESTA> <ACORCHETE> ColumnasEncuesta() <CCORCHETE> {}
+}
+
+void ColumnasEncuesta() :
+{}
+{
+    (ColumnaEncuesta())+ {}
+}
+
+void ColumnaEncuesta() :
+{}
+{
+    <TIPO> <DOSPUNTOS> Tipos() {}
+}
+
+void Tipos() : 
+{}
+{
+    <TEXTO> {}
+    |<ENTERO> {}
+    |<DECIMAL> {}
+    |<RANGO> {}
+    |<CONDICION> {}
+    |<FECHA> {}
+    |<HORA> {}
+    |<FECHAHORA> {}
+    |<SELECCION_UNO> {}
+    |<SELECCION_MULTIPLE> {}
+    |<NOTA> {}
+    |<FICHERO> {}
+    |<CALCULAR> {}
+    |<INICIAR_AGRUPACION> {}
+    |<FINALIZAR_AGRUPACION> {}
+    |<INICIAR_CICLO> {}
+    |<FINALIZAR_CICLO> {}
+}
+
+
+
+
